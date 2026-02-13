@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вопрос</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+            background: #ffe6f0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
 
+<h1>Ты будешь моей валентинкой? ❤️</h1>
+
+<button onclick="yes()">Да 💘</button>
+<button id="no" onmouseover="moveButton()">Нет 😈</button>
+
+<script>
+function yes() {
+    document.body.innerHTML = "<h1>Я знал(а)! ❤️</h1>";
+}
+
+function moveButton() {
+    const button = document.getElementById("no");
+    button.style.left = Math.random() * window.innerWidth + "px";
+    button.style.top = Math.random() * window.innerHeight + "px";
+}
+</script>
+
+</body>
+</html>
